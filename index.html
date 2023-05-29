@@ -21,7 +21,26 @@
        
         <div id="map" class="w-3/5 h-screen"></div>
     </div>
-	<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4c21e519ec55ed4099abfffe0602af47&libraries=clusterer"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js">
+    </script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBfLK924mzVTnjA9KJMS7SeABQsU4Ej3Do",
+            authDomain: "cupscout-c8420.firebaseapp.com",
+            projectId: "cupscout-c8420",
+            storageBucket: "cupscout-c8420.appspot.com",
+            messagingSenderId: "682396608619",
+            appId: "1:682396608619:web:8f75b2076cad377be8a92e",
+            measurementId: "G-N88T4ZGLE4"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+	<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=ce0b6aef4ec062f8e52abc5eb06147f4&libraries=clusterer"></script>
 	<script>
          var 재활용데이터= [
             {longitude:33.4963818,latitude:126.5318389,이름:'이디야 제주시청고산동산점',내용:'재활용',사진:'./사진/이디야 제주시청고산동산점.jpeg'},
@@ -59,11 +78,11 @@
             {longitude:33.4956543,latitude:126.5331797,이름:'맥도날드 제주시청점',내용:'내용',사진: './사진/맥도날드 제주시청점.jpeg'},
             {longitude:33.4947424,latitude:126.5341578,이름:'KFC 제주시청점',내용:'내용',사진: './사진/KFC 제주시청점.jpeg'},
             {longitude:33.5002042,latitude:126.5276265,이름:'더치앤빈 제주시청점',내용:'내용',사진: './사진/더치앤빈 제주시청점.jpeg'},
-            {longitude:33.5004728,latitude:126.5295744,이름:'스타벅스 제주시청점',내용:'내용',사진: './사진/스타벅스 제주시청점.jpeg'},
-            {longitude:33.489129,latitude:126.5394016,이름:'파스쿠찌 이도점',내용:'내용',사진: './사진/파스쿠찌 이도점.jpeg'},
-            {longitude:33.5004881,latitude:126.5266053,이름:'파리바게트 제주광양점',내용:'내용',사진: './사진/파리바게트 제주광양점.jpeg'},
-            {longitude:33.4991118,latitude:126.5299787,이름:'파리바게트 제주시청점',내용:'내용',사진: './사진/파리바게트 제주시청점.jpeg'},
-            {longitude:33.4912529,latitude:126.535779,이름:'파리바게트 제주법원점',내용:'내용',사진: './사진/파리바게트 제주법원점.jpeg'},
+            {longitude:33.5004728,latitude:126.5295744,이름:'스타벅스 제주시청점',내용:'재활용',사진: './사진/스타벅스 제주시청점.jpeg'},
+            {longitude:33.489129,latitude:126.5394016,이름:'파스쿠찌 이도점',내용:'재활용',사진: './사진/파스쿠찌 이도점.jpeg'},
+            {longitude:33.5004881,latitude:126.5266053,이름:'파리바게트 제주광양점',내용:'재활용',사진: './사진/파리바게트 제주광양점.jpeg'},
+            {longitude:33.4991118,latitude:126.5299787,이름:'파리바게트 제주시청점',내용:'재활용',사진: './사진/파리바게트 제주시청점.jpeg'},
+            {longitude:33.4912529,latitude:126.535779,이름:'파리바게트 제주법원점',내용:'재활용',사진: './사진/파리바게트 제주법원점.jpeg'},
         ]
         const displayLIst = ()=>{
         보여지는데이터.forEach((데이터,순서)=>{
